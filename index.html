@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Poem for Mahu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://source.unsplash.com/1920x1080/?romantic,mood') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            backdrop-filter: brightness(0.5);
+        }
+
+        .poem {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .poem h1 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .poem p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .controls button {
+            background-color: #ff4c4c;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .controls button:hover {
+            background-color: #e63e3e;
+        }
+
+        audio {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .poem h1 {
+                font-size: 1.5rem;
+            }
+
+            .poem p {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+
+            .controls button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .poem {
+                padding: 15px;
+            }
+
+            .poem h1 {
+                font-size: 1.2rem;
+            }
+
+            .poem p {
+                font-size: 0.8rem;
+                line-height: 1.4;
+            }
+
+            .controls button {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poem">
+        <h1>প্রিয়তমা মাহু</h1>
+        <p>
+            তোমার চোখের গভীরতায় ডুবতে ডুবতে,<br>
+            আমার হৃদয় হারিয়ে যায় স্বপ্নের জগতে।<br>
+            তোমার ঠোঁটের মিষ্টি হাসি যেন,<br>
+            এক মহাকাব্যের গোপন অধ‍্যায়।
+        </p>
+        <p>
+            তোমার চুলের ঘ্রাণে মিলে চাঁদের সুবাস,<br>
+            রাতের নীরবতায় তুমি আমার আশ্বাস।<br>
+            তোমার কোমল স্পর্শের ছোঁয়ায়,<br>
+            জীবন হয়ে ওঠে এক অনন্ত মোহময়।
+        </p>
+        <p>
+            তুমি আমার জীবনের কবিতা,<br>
+            যার প্রতিটি শব্দে বুনা হয় ভালোবাসার রথ।<br>
+            তোমার আলিঙ্গনে আমি পাই মুক্তি,<br>
+            তোমার অস্তিত্বেই আমার সমস্ত সুখের গতি।
+        </p>
+        <p>
+            তোমার জন্য এই প্রেম অসীম,<br>
+            যেন চাঁদ আর আকাশের চিরন্তন মিতালি।<br>
+            তোমার প্রতি ভালোবাসা অবিনশ্বর,<br>
+            যেন সময়ের ক্যানভাসে লেখা এক চিরন্তন গল্প।
+        </p>
+        <p>
+            তুমি আমার হৃদয়ের একমাত্র রাণী,<br>
+            তোমার কাছে হারাই আমি সমস্ত বোধের মানী।<br>
+            তোমার জন্য জীবন, তোমার জন্য শ্বাস,<br>
+            তুমি-ই আমার অস্তিত্ব, তুমি-ই আমার বিশ্বাস।
+        </p>
+    </div>
+    <div class="controls">
+        <button onclick="playSong()">Play Song</button>
+        <audio id="song" src="3.mp3"></audio>
+    </div>
+
+    <script>
+        function playSong() {
+            const audio = document.getElementById('song');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
